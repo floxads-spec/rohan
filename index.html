@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '936391795609270');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=936391795609270&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->  
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rohan Bhai Community</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      background: #050507;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .rohan-page {
+      position: relative;
+      width: 100%;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 18px;
+      overflow: hidden;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255, 0, 38, 0.38), transparent 35%),
+        radial-gradient(circle at 85% 80%, rgba(0, 102, 255, 0.35), transparent 38%),
+        linear-gradient(135deg, #040406 0%, #16030b 48%, #020b18 100%);
+    }
+
+    /* LIVE MOVING GRID */
+    .live-grid {
+      position: absolute;
+      inset: -60%;
+      width: 220%;
+      height: 220%;
+      opacity: 0.17;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+      background-size: 55px 55px;
+      transform: perspective(500px) rotateX(55deg);
+      animation: moveGrid 12s linear infinite;
+    }
+
+    @keyframes moveGrid {
+      from {
+        background-position: 0 0;
+      }
+
+      to {
+        background-position: 0 110px;
+      }
+    }
+
+    /* LIVE BACKGROUND LIGHTS */
+    .live-light {
+      position: absolute;
+      width: 430px;
+      height: 430px;
+      border-radius: 50%;
+      filter: blur(90px);
+      opacity: 0.35;
+      pointer-events: none;
+      animation: moveLight 9s ease-in-out infinite alternate;
+    }
+
+    .light-red {
+      top: -190px;
+      left: -150px;
+      background: #ff002b;
+    }
+
+    .light-blue {
+      right: -170px;
+      bottom: -190px;
+      background: #006eff;
+      animation-delay: -4s;
+    }
+
+    @keyframes moveLight {
+      from {
+        transform: translate(0, 0) scale(1);
+      }
+
+      to {
+        transform: translate(70px, 60px) scale(1.25);
+      }
+    }
+
+    /* FLOATING PARTICLES */
+    .particle {
+      position: absolute;
+      bottom: -20px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 0 15px #ffffff;
+      opacity: 0;
+      animation: particleMove 7s linear infinite;
+    }
+
+    .particle:nth-of-type(1) {
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .particle:nth-of-type(2) {
+      left: 30%;
+      animation-delay: 2s;
+    }
+
+    .particle:nth-of-type(3) {
+      left: 65%;
+      animation-delay: 4s;
+    }
+
+    .particle:nth-of-type(4) {
+      left: 88%;
+      animation-delay: 1s;
+    }
+
+    @keyframes particleMove {
+      0% {
+        transform: translateY(0) scale(0.4);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 0.75;
+      }
+
+      100% {
+        transform: translateY(-110vh) scale(1.3);
+        opacity: 0;
+      }
+    }
+
+    .main-content {
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      max-width: 780px;
+      text-align: center;
+      animation: contentEntry 0.9s ease-out both;
+    }
+
+    @keyframes contentEntry {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* SPIDEY LOGO */
+    .spidey-logo {
+      position: relative;
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(145deg, #fa0028, #920017);
+      border: 4px solid rgba(255, 255, 255, 0.92);
+      box-shadow:
+        0 0 0 9px rgba(255, 0, 39, 0.15),
+        0 0 48px rgba(255, 0, 39, 0.65);
+      animation: logoFloat 3s ease-in-out infinite;
+    }
+
+    .spidey-logo::after {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      border: 1px solid rgba(255, 255, 255, 0.30);
+      border-radius: 50%;
+      animation: logoPulse 2s ease-out infinite;
+    }
+
+    @keyframes logoFloat {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-9px);
+      }
+    }
+
+    @keyframes logoPulse {
+      0% {
+        transform: scale(0.90);
+        opacity: 0.8;
+      }
+
+      100% {
+        transform: scale(1.20);
+        opacity: 0;
+      }
+    }
+
+    .spidey-logo svg {
+      width: 84px;
+      height: 84px;
+      filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.50));
+    }
+
+    .community-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 8px 17px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(8px);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ff1439;
+      box-shadow: 0 0 12px #ff1439;
+      animation: dotBlink 1.2s ease-in-out infinite;
+    }
+
+    @keyframes dotBlink {
+      50% {
+        opacity: 0.30;
+      }
+    }
+
+    .main-heading {
+      margin: 0 0 10px;
+      color: #ffffff;
+      font-size: clamp(40px, 7.5vw, 75px);
+      line-height: 1.04;
+      font-weight: 900;
+      letter-spacing: -3px;
+      text-transform: uppercase;
+      text-shadow: 0 8px 30px rgba(0, 0, 0, 0.60);
+    }
+
+    .main-heading span {
+      display: block;
+      color: transparent;
+      background: linear-gradient(
+        90deg,
+        #ff163d 0%,
+        #ffffff 48%,
+        #1681ff 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    .description {
+      max-width: 550px;
+      margin: 5px auto 25px;
+      color: rgba(255, 255, 255, 0.76);
+      font-size: 15px;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    /* CTA BUTTON */
+    .telegram-button {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 11px;
+      min-width: 260px;
+      padding: 17px 30px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      border-radius: 999px;
+      color: #ffffff;
+      background: linear-gradient(90deg, #e90026, #b9001c);
+      box-shadow:
+        0 14px 38px rgba(232, 0, 38, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.30);
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      transition: 0.3s ease;
+    }
+
+    .telegram-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 60%;
+      height: 100%;
+      transform: skewX(-25deg);
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.48),
+        transparent
+      );
+      animation: buttonShine 3s ease-in-out infinite;
+    }
+
+    @keyframes buttonShine {
+      0%,
+      35% {
+        left: -120%;
+      }
+
+      70%,
+      100% {
+        left: 150%;
+      }
+    }
+
+    .telegram-button:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow:
+        0 20px 48px rgba(232, 0, 38, 0.56),
+        0 0 25px rgba(255, 255, 255, 0.14);
+    }
+
+    .telegram-button:active {
+      transform: scale(0.97);
+    }
+
+    .telegram-button svg {
+      position: relative;
+      z-index: 2;
+      width: 22px;
+      height: 22px;
+    }
+
+    .telegram-button span {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* 18+ INFORMATION */
+    .age-notice {
+      width: 100%;
+      max-width: 520px;
+      margin: 24px auto 0;
+      padding: 13px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 12px;
+      color: rgba(255, 255, 255, 0.72);
+      background: rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(8px);
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .age-icon {
+      min-width: 37px;
+      height: 37px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #ff2144;
+      border-radius: 50%;
+      color: #ffffff;
+      background: rgba(255, 0, 39, 0.15);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .brand-name {
+      margin-top: 32px;
+      color: rgba(255, 255, 255, 0.48);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .brand-name strong {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    @media (max-width: 600px) {
+      .rohan-page {
+        min-height: 100svh;
+        padding: 25px 15px;
+      }
+
+      .spidey-logo {
+        width: 105px;
+        height: 105px;
+        margin-bottom: 21px;
+      }
+
+      .spidey-logo svg {
+        width: 68px;
+        height: 68px;
+      }
+
+      .community-label {
+        margin-bottom: 14px;
+        padding: 7px 13px;
+        font-size: 10px;
+        letter-spacing: 1.1px;
+      }
+
+      .main-heading {
+        margin-bottom: 10px;
+        font-size: clamp(36px, 12vw, 54px);
+        line-height: 1.05;
+        letter-spacing: -2px;
+      }
+
+      .description {
+        margin-top: 5px;
+        margin-bottom: 22px;
+        font-size: 13px;
+        line-height: 1.65;
+      }
+
+      .telegram-button {
+        width: 100%;
+        max-width: 320px;
+        min-width: 0;
+        padding: 16px 20px;
+        font-size: 13px;
+      }
+
+      .age-notice {
+        max-width: 340px;
+        padding: 11px 12px;
+        gap: 9px;
+        text-align: left;
+        font-size: 10px;
+      }
+
+      .age-icon {
+        min-width: 34px;
+        height: 34px;
+        font-size: 11px;
+      }
+
+      .brand-name {
+        margin-top: 28px;
+      }
+
+      .live-grid {
+        background-size: 42px 42px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="rohan-page">
+
+    <div class="live-grid"></div>
+    <div class="live-light light-red"></div>
+    <div class="live-light light-blue"></div>
+
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+    <span class="particle"></span>
+
+    <div class="main-content">
+
+      <div class="spidey-logo" aria-label="Spidey logo">
+        <svg viewBox="0 0 120 120" aria-hidden="true">
+
+          <path
+            d="M60 9C38 9 21 25 21 47c0 30 18 55 39 64 21-9 39-34 39-64C99 25 82 9 60 9Z"
+            fill="#df0022"
+            stroke="#101018"
+            stroke-width="5"
+          />
+
+          <path
+            d="M60 12v96M25 40h70M23 59h74M31 81h58"
+            stroke="#11111a"
+            stroke-width="2.4"
+          />
+
+          <path
+            d="M60 38 31 21M60 38 89 21M60 58 23 40M60 58 97 40M60 78 25 59M60 78 95 59M60 99 31 81M60 99 89 81"
+            stroke="#11111a"
+            stroke-width="2.4"
+          />
+
+          <path
+            d="M31 43c7-9 17-12 25-10-2 17-8 29-20 36-7-7-9-16-5-26Z"
+            fill="#ffffff"
+            stroke="#11111a"
+            stroke-width="4"
+          />
+
+          <path
+            d="M89 43c-7-9-17-12-25-10 2 17 8 29 20 36 7-7 9-16 5-26Z"
+            fill="#ffffff"
+            stroke="#11111a"
+            stroke-width="4"
+          />
+
+        </svg>
+      </div>
+
+      <div class="community-label">
+        <span class="live-dot"></span>
+        Official Community
+      </div>
+
+      <h1 class="main-heading">
+        Rohan Bhai
+        <span>Community</span>
+      </h1>
+
+      <p class="description">
+        Join our Telegram community for the latest updates, announcements and community content.
+      </p>
+
+      <a
+        class="telegram-button"
+        href="https://t.me/+Di4MemyN8vAyYTc1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M21.8 2.2c-.3-.2-.7-.3-1.1-.1L2.1 9.3c-.7.3-.8 1.2-.1 1.6l4.7 2.3 1.8 5.6c.2.7 1.1.9 1.6.4l2.6-2.5 4.8 3.5c.6.4 1.4.1 1.5-.6l3.1-16.4c.1-.4 0-.8-.3-1ZM9.3 13.5l8.4-7.4-6.5 8.3-.5 2.5-1.4-3.4Z"/>
+        </svg>
+
+        <span>Join Telegram Channel</span>
+      </a>
+
+      <div class="age-notice">
+        <div class="age-icon">18+</div>
+
+        <div>
+          This community is intended only for users aged 18 years or above.
+          Please join and participate responsibly.
+        </div>
+      </div>
+
+      <div class="brand-name">
+        Designed by <strong>FLOX ADS</strong>
+      </div>
+
+    </div>
+  </main>
+
+</body>
+</html>
