@@ -18,6 +18,21 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1095840476427999&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+  <script>
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a');
+  if (link && link.href.includes('https://t.me/+kXAtR6JNLLs2MWRl')) {
+     fbq('track', 'Lead');
+    fbq('track', 'Subscribe');
+  }
+});
+</script>
+  <script>
+document.getElementById('joinBtn').addEventListener('click', function() {
+  fbq('track', 'Lead');
+  fbq('track', 'Subscribe');
+});
+</script>
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
